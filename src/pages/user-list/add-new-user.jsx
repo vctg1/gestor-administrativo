@@ -43,9 +43,9 @@ const SwitchWrapper = styled(Box)(() => ({
 
 const AddNewUser = () => {
   const initialValues = {
-    fullName: "",
+    Nome: "",
     email: "",
-    phone: "",
+    Fone: "",
     country: "",
     state: "",
     city: "",
@@ -54,9 +54,9 @@ const AddNewUser = () => {
     about: "",
   };
   const validationSchema = Yup.object().shape({
-    fullName: Yup.string().required("Name is Required!"),
+    Nome: Yup.string().required("Name is Required!"),
     email: Yup.string().email().required("Email is Required!"),
-    phone: Yup.number().min(8).required("Phone is Required!"),
+    Fone: Yup.number().min(8).required("Fone is Required!"),
     country: Yup.string().required("Country is Required!"),
     state: Yup.string().required("State is Required!"),
     city: Yup.string().required("City is Required!"),
@@ -72,81 +72,6 @@ const AddNewUser = () => {
   return (
     <Box pt={2} pb={4}>
       <Grid container spacing={3}>
-        <Grid item md={4} xs={12}>
-          <Card
-            sx={{
-              padding: 3,
-              minHeight: 400,
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
-            }}
-          >
-            <ButtonWrapper>
-              <UploadButton>
-                <label htmlFor="upload-btn">
-                  <input
-                    accept="image/*"
-                    id="upload-btn"
-                    type="file"
-                    style={{
-                      display: "none",
-                    }}
-                  />
-                  <IconButton component="span">
-                    <PhotoCamera
-                      sx={{
-                        fontSize: 26,
-                        color: "white",
-                      }}
-                    />
-                  </IconButton>
-                </label>
-              </UploadButton>
-            </ButtonWrapper>
-
-            <Small
-              marginTop={2}
-              maxWidth={200}
-              lineHeight={1.9}
-              display="block"
-              textAlign="center"
-              color="text.secondary"
-            >
-              Allowed *.jpeg, *.jpg, *.png, *.gif max size of 3.1 MB
-            </Small>
-
-            <Box maxWidth={250} marginTop={5} marginBottom={1}>
-              <SwitchWrapper>
-                <Small display="block" fontWeight={600}>
-                  Public Profile
-                </Small>
-                <Switch defaultChecked />
-              </SwitchWrapper>
-
-              <SwitchWrapper>
-                <Small display="block" fontWeight={600}>
-                  Banned
-                </Small>
-                <Switch defaultChecked />
-              </SwitchWrapper>
-              <Tiny display="block" color="text.secondary" fontWeight={500}>
-                Apply disable account
-              </Tiny>
-
-              <SwitchWrapper>
-                <Small display="block" fontWeight={600}>
-                  Email Verified
-                </Small>
-                <Switch defaultChecked />
-              </SwitchWrapper>
-              <Tiny display="block" color="text.secondary" fontWeight={500}>
-                Disabling this will automatically send the user a verification
-                email
-              </Tiny>
-            </Box>
-          </Card>
-        </Grid>
         <Grid item md={8} xs={12}>
           <Card
             sx={{
@@ -158,12 +83,12 @@ const AddNewUser = () => {
                 <Grid item sm={6} xs={12}>
                   <AppTextField
                     fullWidth
-                    name="fullName"
-                    label="Full Name"
-                    value={values.fullName}
+                    name="Nome"
+                    label="Nome"
+                    value={values.Nome}
                     onChange={handleChange}
-                    error={Boolean(touched.fullName && errors.fullName)}
-                    helperText={touched.fullName && errors.fullName}
+                    error={Boolean(touched.Nome && errors.Nome)}
+                    helperText={touched.Nome && errors.Nome}
                   />
                 </Grid>
 
@@ -182,12 +107,12 @@ const AddNewUser = () => {
                 <Grid item sm={6} xs={12}>
                   <AppTextField
                     fullWidth
-                    name="phone"
-                    label="Phone Number"
-                    value={values.phone}
+                    name="Fone"
+                    label="Fone"
+                    value={values.Fone}
                     onChange={handleChange}
-                    error={Boolean(touched.phone && errors.phone)}
-                    helperText={touched.phone && errors.phone}
+                    error={Boolean(touched.Fone && errors.Fone)}
+                    helperText={touched.Fone && errors.Fone}
                   />
                 </Grid>
 
