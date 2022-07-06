@@ -46,7 +46,7 @@ const AddNewUser = () => {
     Nome: "",
     email: "",
     Fone: "",
-    country: "",
+    Nacionalidade: "",
     state: "",
     city: "",
     address: "",
@@ -57,7 +57,7 @@ const AddNewUser = () => {
     Nome: Yup.string().required("Name is Required!"),
     email: Yup.string().email().required("Email is Required!"),
     Fone: Yup.number().min(8).required("Fone is Required!"),
-    country: Yup.string().required("Country is Required!"),
+    Nacionalidade: Yup.string().required("Nacionalidade is Required!"),
     state: Yup.string().required("State is Required!"),
     city: Yup.string().required("City is Required!"),
     address: Yup.string().required("Address is Required!"),
@@ -119,12 +119,12 @@ const AddNewUser = () => {
                 <Grid item sm={6} xs={12}>
                   <AppTextField
                     fullWidth
-                    name="country"
-                    label="Country"
-                    value={values.country}
+                    name="Nacionalidade"
+                    label="Nacionalidade"
+                    value={values.Nacionalidade}
                     onChange={handleChange}
-                    error={Boolean(touched.country && errors.country)}
-                    helperText={touched.country && errors.country}
+                    error={Boolean(touched.Nacionalidade && errors.Nacionalidade)}
+                    helperText={touched.Nacionalidade && errors.Nacionalidade}
                   />
                 </Grid>
 
