@@ -12,6 +12,7 @@ import "simplebar/dist/simplebar.min.css";
 import App from "./App";
 import SettingsProvider from "./contexts/settingsContext";
 import reportWebVitals from "./reportWebVitals";
+import './index.css'
 import "./__fakeData__";
 ReactDOM.render(
   <React.StrictMode>
